@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Finder</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+        header nav a {
+            margin: 0 15px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            background-color: #f0f4ff;
+            padding: 40px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            color: #002966;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        /* Filter Section */
+        .filter {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .filter label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .filter input {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        /* Rank Boxes Section */
+        .rank-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 boxes per row on large screens */
+            gap: 20px; /* Space between boxes */
+            padding: 20px;
+        }
+        .rank-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .rank-box:hover {
+            transform: scale(1.05);
+        }
+        .rank-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+        .rank-box h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .rank-box a {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            color: white;
+            background-color: #007BFF;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .rank-box a:hover {
+            background-color: #0056b3;
+        }
+        /* Hot Jobs Section */
+        .hot-jobs {
+            padding: 20px;
+            background-color: #fff;
+        }
+        .hot-jobs h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #002966;
+            margin-bottom: 20px;
+        }
+        .hot-job-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 hot jobs per row */
+            gap: 20px;
+            padding: 20px;
+        }
+        .hot-job {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .hot-job h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #007BFF;
+        }
+        .hot-job p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .hot-job a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            color: white;
+            background-color: #ff4081;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .hot-job a:hover {
+            background-color: #e60073;
+        }
+        /* Footer Section */
+        footer {
+            background-color: #002966;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .footer-container p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .social-links a {
+            text-decoration: none;
+        }
+        .social-links img {
+            width: 30px;
+            height: 30px;
+            transition: transform 0.3s ease;
+        }
+        .social-links img:hover {
+            transform: scale(1.2);
+        }
+        
+        /* YouTube Ad Section */
+        .youtube-ad {
+            position: fixed;
+            right: 10px;
+            bottom: 10px;
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            overflow: hidden;
+        }
+        .youtube-ad iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+        .youtube-ad .close-ad {
+            text-align: center;
+            padding: 5px;
+            background-color: #ff4081;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .youtube-ad .close-ad:hover {
+            background-color: #e60073;
+        }
+        .whatsapp-ad {
+            text-align: center;
+            padding: 10px;
+        }
+        .whatsapp-ad img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        .whatsapp-ad p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .whatsapp-ad a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .whatsapp-ad a:hover {
+            background-color: #1bc158;
+        }
+        .close-ad {
+            text-align: center;
+            padding: 5px;
+            background-color: #ff4081;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .close-ad:hover {
+            background-color: #e60073;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .rank-container {
+                grid-template-columns: repeat(3, 1fr); /* 3 boxes per row for medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .rank-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 boxes per row for tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rank-container {
+                grid-template-columns: 1fr; /* 1 box per row for mobile screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Merchant Navy Decoded Jobs</div>
+        <nav>
+            <a href="file:///C:/Users/Asus/Desktop/test/test.html#">Home</a>
+            <a href="file:///C:/Users/Asus/Desktop/test/about1.html">About</a>
+            <a href="file:///C:/Users/Asus/Desktop/test/CONTACTUS.HTML">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Find the Realtime Jobs for every rank</h1>
+        <h2><b><p>Date:- 12/01/2024</p></b><h2>
+    </section>
+
+    <!-- Rank Boxes Section -->
+    <div class="rank-container">
+        <div class="rank-box">
+            <img src="captain.jpg" alt="Captain Jobs">
+            <h3>Job Openings for Captain</h3>
+            <a href="rank1.html">View Details</a>
+        </div>
+        <div class="rank-box">
+            <img src="co.jpg" alt="Chief Officer Jobs">
+            <h3>Job Openings for Chief Officer</h3>
+            <a href="rank2.html">View Details</a>
+        </div>
+        <div class="rank-box">
+            <img src="2o.jpg" alt="Second Officer Jobs">
+            <h3>Job Openings for 2nd Officer</h3>
+            <a href="rank3.html">View Details</a>
+        </div>
+        <div class="rank-box">
+            <img src="3o.png" alt="Third Officer Jobs">
+            <h3>Job Openings for 3rd Officer</h3>
+            <a href="rank3.html">View Details</a>
+        </div>
+        <div class="rank-box">
+            <img src="ce.jpg" alt="Chief Engineer Jobs">
+            <h3>Job Openings for Chief Engineer</h3>
+            <a href="rank3.html">View Details</a>
+        </div>
+        <div class="rank-box">
+            <img src="2e.jpg" alt="Second Engineer Jobs">
+            <h3>Job Openings for 2nd Engineer</h3>
+            <a href="rank3.html">View Details</a>
+        </div>
+        <div class="rank-box">
+            <img src="3e.png" alt="Third Engineer Jobs">
+            <h3>Job Openings for 3rd Engineer</h3>
+            <a href="rank3.html">View Details</a>
+        </div>
+        <div class="rank-box">
+            <img src="4e.jpg" alt="Fourth Engineer Jobs">
+            <h3>Job Openings for 4th Engineer</h3>
+            <a href="rank3.html">View Details</a>
+        </div>
+        <div class="rank-box">
+            <img src="eto.jpg" alt="ETO Jobs">
+            <h3>Job Openings for ETO</h3>
+            <a href="rank3.html">View Details</a>
+        </div>
+        <div class="rank-box">
+            <img src="ratings.png" alt="Ratings Jobs">
+            <h3>Job Openings for Ratings</h3>
+            <a href="rank3.html">View Details</a>
+        </div>
+    </div>
+
+    <!-- Hot Jobs Section -->
+    <section class="hot-jobs">
+        <h2>Hot Jobs</h2>
+        <div class="hot-job-list">
+            <div class="hot-job">
+                <h3>Senior Software Engineer</h3>
+                <p>Company: ABC Tech</p>
+                <p>Location: New York</p>
+                <a href="#">Apply Now</a>
+            </div>
+            <div class="hot-job">
+                <h3>Data Scientist</h3>
+                <p>Company: XYZ Analytics</p>
+                <p>Location: San Francisco</p>
+                <a href="#">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Ad -->
+    <div class="youtube-ad" id="youtubeAd">
+        <iframe 
+            src="https://www.youtube.com/embed/qg2744lDGxY?autoplay=1&mute=1"
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        <div class="close-ad" onclick="document.getElementById('youtubeAd').style.display='none';">Close Ad</div>
+    </div>
+    
+        <!-- WhatsApp Ad -->
+        <div class="whatsapp-ad" id="whatsappAd">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+            <p>Join our WhatsApp Channel for updates!</p>
+            <a href="https://wa.me/yourwhatsappnumber" target="_blank">Join Now</a>
+            <div class="close-ad" onclick="document.getElementById('whatsappAd').style.display='none';">Close Ad</div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Job Finder. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/yourprofile" target="_blank" title="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" />
+                </a>
+                <a href="https://www.youtube.com/channel/yourchannel" target="_blank" title="YouTube">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733646.png" alt="YouTube" />
+                </a>
+                <a href="https://wa.me/yourwhatsappnumber" target="_blank" title="WhatsApp">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" />
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
