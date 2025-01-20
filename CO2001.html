@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chief Officer Job Openings</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+            color: #fff;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: linear-gradient(to right, #00264d, #004080);
+            color: white;
+            padding: 20px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 80px;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        header .date {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        .job {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #555;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            background: linear-gradient(to right, #2a2a2a, #333);
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .job:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
+        }
+        .job-details {
+            flex: 3;
+            margin-bottom: 10px;
+        }
+        .job-details strong {
+            font-size: 1.2rem;
+            color: #00ffcc;
+        }
+        .job-details p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        .share-cv {
+            flex: 1;
+            text-align: right;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .share-cv button {
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .share-cv .email {
+            background: #ffd700; /* Yellow */
+            color: #000;
+        }
+        .share-cv .email:hover {
+            transform: scale(1.1);
+            background: #ffcc00;
+        }
+        .share-cv .whatsapp {
+            background: #25d366; /* Green */
+            color: #fff;
+        }
+        .share-cv .whatsapp:hover {
+            transform: scale(1.1);
+            background: #20b954;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #001a33;
+            color: white;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+        }
+        .footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+        .footer a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .job {
+                flex-direction: column;
+                text-align: center;
+            }
+            .share-cv {
+                text-align: center;
+            }
+            .job-details p, .job-details strong {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header .date {
+                font-size: 0.8rem;
+            }
+            .job {
+                padding: 15px;
+            }
+            .job-details p, .job-details strong {
+                font-size: 0.9rem;
+            }
+            .share-cv button {
+                font-size: 0.9rem;
+                padding: 8px 10px;
+            }
+            .footer p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <img src="Companylogo.jpeg" alt="Company Logo">
+        <h1>Chief Officer Job Openings</h1>
+        <p class="date">Updated: 20/01/2025</p>
+    </header>
+    <div class="container">
+
+
+<!-- Job Post 1 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: Wilhelmsen Ship Management</strong>
+        <p><strong>Position:</strong> Chief Officer (CO)</p>
+        <p><strong>Vessel Type:</strong> Cape Sized Bulk Carriers and VLGC</p>
+        <p><strong>Experience:</strong> Must have 7 months or more in rank.</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:Harshada.Chavan@wilhelmsen.com?subject=Application for Chief Officer (CO) Position - Cape Sized Bulk Carriers and VLGC&body=Hello, I am interested in applying for the Chief Officer (CO) position (Cape Sized Bulk Carriers and VLGC) at Wilhelmsen Ship Management. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/918657792015?text=Hello, I am interested in applying for the Chief Officer (CO) position (Cape Sized Bulk Carriers and VLGC) at Wilhelmsen Ship Management. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 2 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: Brukaan Ship & Offshore Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> Chief Officer</p>
+        <p><strong>Vessel Type:</strong> MOL (Chemical Tankers)</p>
+        <p><strong>Experience:</strong> 12 months rank experience as Chief Officer on Chemical Tankers</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:karuna@brukaanship.com?subject=Application for Chief Officer Position - MOL (Chemical Tankers)&body=Hello, I am interested in applying for the Chief Officer position (MOL - Chemical Tankers) at Brukaan Ship & Offshore Pvt. Ltd. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/918097434504?text=Hello, I am interested in applying for the Chief Officer position (MOL - Chemical Tankers) at Brukaan Ship & Offshore Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 3 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: Ryan Ship Management Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> Chief Officer DPO</p>
+        <p><strong>Vessel Type:</strong> DP2 PSV / AHTS Vessel</p>
+        <p><strong>Location:</strong> Qatar</p>
+        <p><strong>Contract Duration:</strong> 90 days</p>
+        <p><strong>Traveling Date:</strong> 25/01/2025</p>
+        <p><strong>Experience:</strong> 15 months of experience as a Chief Officer DPO on DP2 PSV / AHTS vessel, with Well-stimulation experience required</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:applications@ryanship.com?subject=Application for Chief Officer DPO Position - DP2 PSV/AHTS Vessel&body=Hello, I am interested in applying for the Chief Officer DPO position (DP2 PSV/AHTS Vessel) at Ryan Ship Management Pvt. Ltd. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/918879641807?text=Hello, I am interested in applying for the Chief Officer DPO position (DP2 PSV/AHTS Vessel) at Ryan Ship Management Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 4 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: ASP Crewships India Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> Chief Officer (CO)</p>
+        <p><strong>Vessel Type:</strong> Oil + Chemical MR Tankers</p>
+        <p><strong>Experience:</strong> Competitive salaries offered as per market standards. Preference for candidates with a USA visa.</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:rparab@crewships.com?subject=Application for Chief Officer (CO) Position - Oil + Chemical MR Tankers&body=Hello, I am interested in applying for the Chief Officer (CO) position (Oil + Chemical MR Tankers) at ASP Crewships India Pvt. Ltd. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/919820418207?text=Hello, I am interested in applying for the Chief Officer (CO) position (Oil + Chemical MR Tankers) at ASP Crewships India Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 5 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: ASP Crewships India Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> Chief Officer (CO)</p>
+        <p><strong>Vessel Type:</strong> Bulk Carriers</p>
+        <p><strong>Experience:</strong> Competitive salaries offered as per market standards. Preference for candidates with a USA visa.</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:rparab@crewships.com?subject=Application for Chief Officer (CO) Position - Bulk Carriers&body=Hello, I am interested in applying for the Chief Officer (CO) position (Bulk Carriers) at ASP Crewships India Pvt. Ltd. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/919820418207?text=Hello, I am interested in applying for the Chief Officer (CO) position (Bulk Carriers) at ASP Crewships India Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 6 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: Brukaan Ship & Offshore Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> Chief Officer (CO)</p>
+        <p><strong>Vessel Type:</strong> MOL (Chemical Tankers)</p>
+        <p><strong>Experience:</strong> 12 months experience handling chemicals</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:gurbani@brukaanship.com?subject=Application for Chief Officer (CO) Position - MOL (Chemical Tankers)&body=Hello, I am interested in applying for the Chief Officer (CO) position (MOL - Chemical Tankers) at Brukaan Ship & Offshore Pvt. Ltd. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/917678044387?text=Hello, I am interested in applying for the Chief Officer (CO) position (MOL - Chemical Tankers) at Brukaan Ship & Offshore Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 7 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: Brukaan Ship & Offshore Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> Chief Officer (CO)</p>
+        <p><strong>Vessel Type:</strong> Oil/Chemical Tankers (CPP Cargo/MR Tankers)</p>
+        <p><strong>Experience:</strong> 12 months experience</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:gurbani@brukaanship.com?subject=Application for Chief Officer (CO) Position - Oil/Chemical Tankers&body=Hello, I am interested in applying for the Chief Officer (CO) position (Oil/Chemical Tankers) at Brukaan Ship & Offshore Pvt. Ltd. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/917678044387?text=Hello, I am interested in applying for the Chief Officer (CO) position (Oil/Chemical Tankers) at Brukaan Ship & Offshore Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 8 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: Brukaan Ship & Offshore Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> Chief Officer (CO)</p>
+        <p><strong>Vessel Type:</strong> Offshore (Towing Tug)</p>
+        <p><strong>Experience:</strong> 24 months experience</p>
+        <p><strong>Work Scope:</strong> Towing Tug</p>
+        <p><strong>Client:</strong> L&T India</p>
+        <p><strong>Project:</strong> DUDP & PRP-VIII of ONGC and TDP of Shell/BG</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:gurbani@brukaanship.com?subject=Application for Chief Officer (CO) Position - Offshore (Towing Tug)&body=Hello, I am interested in applying for the Chief Officer (CO) position (Offshore - Towing Tug) at Brukaan Ship & Offshore Pvt. Ltd. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/917678044387?text=Hello, I am interested in applying for the Chief Officer (CO) position (Offshore - Towing Tug) at Brukaan Ship & Offshore Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 9 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: Brukaan Ship & Offshore Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> Chief Officer</p>
+        <p><strong>Vessel Type:</strong> Astro Offshore</p>
+        <p><strong>Experience:</strong> 12 months rank experience as Chief Officer on Offshore vessels</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:karuna@brukaanship.com?subject=Application for Chief Officer Position - Astro Offshore&body=Hello, I am interested in applying for the Chief Officer position (Astro Offshore) at Brukaan Ship & Offshore Pvt. Ltd. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/918097434504?text=Hello, I am interested in applying for the Chief Officer position (Astro Offshore) at Brukaan Ship & Offshore Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="footer">
+        <p>© 2024 Merchant Navy Decoded Jobs | Contact us at 
+            <a href="https://whatsapp.com/channel/0029VaeWFWW1SWsrJDXXxs06">Whatsapp Channel</a>
+        </p>
+</div>
+</body>
+</html>

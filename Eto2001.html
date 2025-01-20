@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETO Job Openings</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+            color: #fff;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: linear-gradient(to right, #00264d, #004080);
+            color: white;
+            padding: 20px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 80px;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        header .date {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 100%;
+            padding: 20px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        .job {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #555;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            background: linear-gradient(to right, #2a2a2a, #333);
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .job:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
+        }
+        .job-details {
+            flex: 3;
+            margin-bottom: 10px;
+        }
+        .job-details strong {
+            font-size: 1.2rem;
+            color: #00ffcc;
+        }
+        .job-details p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+        .share-cv {
+            flex: 1;
+            text-align: right;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .share-cv button {
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .share-cv .email {
+            background: #ffd700; /* Yellow */
+            color: #000;
+        }
+        .share-cv .email:hover {
+            transform: scale(1.1);
+            background: #ffcc00;
+        }
+        .share-cv .whatsapp {
+            background: #25d366; /* Green */
+            color: #fff;
+        }
+        .share-cv .whatsapp:hover {
+            transform: scale(1.1);
+            background: #20b954;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #001a33;
+            color: white;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
+        }
+        .footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+        .footer a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .job {
+                flex-direction: column;
+                text-align: center;
+            }
+            .share-cv {
+                text-align: center;
+            }
+            .job-details p, .job-details strong {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header .date {
+                font-size: 0.8rem;
+            }
+            .job {
+                padding: 15px;
+            }
+            .job-details p, .job-details strong {
+                font-size: 0.9rem;
+            }
+            .share-cv button {
+                font-size: 0.9rem;
+                padding: 8px 10px;
+            }
+            .footer p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header>
+        <img src="Companylogo.jpeg" alt="Company Logo">
+        <h1>ETO Job Openings</h1>
+        <p class="date">Updated: 20/01/2025</p>
+    </header>
+    <div class="container">
+<!-- Job Post 1 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: All Weather Shipping, Trading & Services Private Limited</strong>
+        <p><strong>Position:</strong> ETO (Electro-Technical Officer)</p>
+        <p><strong>Vessel Type:</strong> Oil Chemical Tanker</p>
+        <p><strong>Experience:</strong> Relevant experience required.</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:crewing@allweathersts.com?subject=Application for ETO Position - Oil Chemical Tanker&body=Hello, I am interested in applying for the ETO position (Oil Chemical Tanker) at All Weather Shipping, Trading & Services Private Limited. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/91865587431?text=Hello, I am interested in applying for the ETO position (Oil Chemical Tanker) at All Weather Shipping, Trading & Services Private Limited. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 2 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: Shoolin Management Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> EO (Electro-Technical Officer)</p>
+        <p><strong>Vessel Type:</strong> Bitumen Tanker (GRT 8000)</p>
+        <p><strong>Experience:</strong> Must have tanker experience</p>
+    </div>
+    <div class="share-cv">
+        <button class="whatsapp" onclick="location.href='https://wa.me/918655445670?text=Hello, I am interested in applying for the EO position (Bitumen Tanker - GRT 8000) at Shoolin Management Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 3 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: Shoolin Management Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> EO (Electro-Technical Officer)</p>
+        <p><strong>Vessel Type:</strong> Oil Tanker (GRT 28000)</p>
+        <p><strong>Experience:</strong> Must have tanker experience</p>
+    </div>
+    <div class="share-cv">
+        <button class="whatsapp" onclick="location.href='https://wa.me/918655445670?text=Hello, I am interested in applying for the EO position (Oil Tanker - GRT 28000) at Shoolin Management Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 4 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: ASP Crewships India Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> Electro-Technical Officer (ETO)</p>
+        <p><strong>Vessel Type:</strong> Oil + Chemical MR Tankers</p>
+        <p><strong>Experience:</strong> Competitive salaries offered as per market standards. Preference for candidates with a USA visa.</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:rparab@crewships.com?subject=Application for ETO Position - Oil + Chemical MR Tankers&body=Hello, I am interested in applying for the ETO position (Oil + Chemical MR Tankers) at ASP Crewships India Pvt. Ltd. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/919820418207?text=Hello, I am interested in applying for the ETO position (Oil + Chemical MR Tankers) at ASP Crewships India Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+<!-- Job Post 5 -->
+<div class="job">
+    <div class="job-details">
+        <strong>Company: Brukaan Ship & Offshore Pvt. Ltd.</strong>
+        <p><strong>Position:</strong> Electro-Technical Officer (ETO)</p>
+        <p><strong>Vessel Type:</strong> Oil/Chemical Tankers (CPP Cargo/MR Tankers)</p>
+        <p><strong>Experience:</strong> 12 months experience</p>
+    </div>
+    <div class="share-cv">
+        <button class="email" onclick="location.href='mailto:gurbani@brukaanship.com?subject=Application for ETO Position - Oil/Chemical Tankers&body=Hello, I am interested in applying for the ETO position (Oil/Chemical Tankers) at Brukaan Ship & Offshore Pvt. Ltd. Please find my updated resume attached. Let me know the next steps. Thank you.'">
+            Apply via Email
+        </button>
+        <button class="whatsapp" onclick="location.href='https://wa.me/917678044387?text=Hello, I am interested in applying for the ETO position (Oil/Chemical Tankers) at Brukaan Ship & Offshore Pvt. Ltd. Please guide me through the application process.'">
+            Apply via WhatsApp
+        </button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="footer">
+        <p>© 2024 Merchant Navy Decoded Jobs | Contact us at 
+            <a href="https://whatsapp.com/channel/0029VaeWFWW1SWsrJDXXxs06">Whatsapp Channel</a>
+        </p>
+</div>
+</body>
+</html>
