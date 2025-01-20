@@ -280,7 +280,31 @@
         .close-ad:hover {
             background-color: #e60073;
         }
+         @media (max-width: 768px) {
+        .hero {
+            max-width: 95%; /* Reduce width on tablets */
+            padding: 15px; /* Reduce padding */
+        }
+        .hero h1 {
+            font-size: 1.8rem; /* Reduce font size */
+        }
+        .hero h2 p {
+            font-size: 1rem; /* Smaller font for date */
+        }
+    }
 
+    @media (max-width: 480px) {
+        .hero {
+            max-width: 90%; /* Further reduce width on mobile */
+            padding: 10px; /* Smaller padding */
+        }
+        .hero h1 {
+            font-size: 1.5rem; /* Adjust font size */
+        }
+        .hero h2 p {
+            font-size: 0.9rem; /* Smaller font size for date */
+        }
+    }
         /* Responsive Design */
         @media (max-width: 992px) {
             .rank-container {
