@@ -69,6 +69,23 @@
             border: 1px solid #ddd;
             border-radius: 5px;
         }
+                /* Rank Dropdown Section */
+        .rank-dropdown {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .rank-dropdown label {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .rank-dropdown select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+        }
         /* Rank Boxes Section */
         .rank-container {
             display: grid;
@@ -298,7 +315,22 @@
         <h1>Find the Realtime Jobs for every rank</h1>
         <h2><b><p>Date:- 20/01/2024</p></b><h2>
     </section>
-
+       <div class="rank-dropdown">
+           <label for="rank">Select Rank:</label>
+           <select id="rank" name="rank" onchange="navigateToRankPage()">
+           <option value="">Select a Rank</option>
+           <option value="captain">Captain</option>
+           <option value="chief-officer">Chief Officer</option>
+           <option value="2nd-officer">2nd Officer</option>
+           <option value="3rd-officer">3rd Officer</option>
+           <option value="chief-engineer">Chief Engineer</option>
+           <option value="2nd-engineer">2nd Engineer</option>
+           <option value="3rd-engineer">3rd Engineer</option>
+           <option value="4th-engineer">4th Engineer</option>
+           <option value="eto">ETO</option>
+           <option value="ratings">Ratings</option>
+          </select>
+    </div>
     <!-- Rank Boxes Section -->
     <div class="rank-container">
         <div class="rank-box">
@@ -391,6 +423,16 @@
             <div class="close-ad" onclick="document.getElementById('whatsappAd').style.display='none';">Close Ad</div>
         </div>
     </div>
+    <script>
+    function navigateToRankPage() {
+        const rank = document.getElementById('rank').value;
+        if (rank) {
+            // Navigate to the respective rank's page
+            window.location.href = `${rank}.html`;
+        }
+    }
+    </script>
+
 
 
     <!-- Footer Section -->
